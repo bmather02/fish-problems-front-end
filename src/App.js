@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import {Route, Routes} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import Footer from './components/Footer';
+import Problems from './pages/problems';
+import About from './pages/about';
+import Home from './pages/home';
 
 function App() {
+
+  const [problems, setProblems] = useState([]);
+
+  const URL = "http://localhost:3001/problems"
+  const getProblems = async () => {
+    const response = await fetch(URL);
+    const data = await response.json();
+    setProblems(data)
+  }
+  console.log(problems)
+
+  useEffect(() => {getProblems()}, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+    <Routes>
+      <Route exact path='/' element={<Home/>}/>
+      <Route exact path='/about' element={<About/>}/>
+      <Route exact path='/problems' element={<Problems problems={problems} />}/>
+    </Routes>
+    <Footer/>
     </div>
   );
 }
