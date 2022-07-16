@@ -1,9 +1,18 @@
-import Problem from "../components/Problem"
+import {Link} from 'react-router-dom'
 function Problems({problems}) {
     function loaded() {
         if(problems){
-            return (problems.map((problem,index) => {
-                return <Problem problem={problem} key={index}/>
+            return (problems.map((problem) => {
+                return (
+                    <div key={problem._id}>
+                <Link to={`/problems/${problem._id}`}>
+                    <h2>{problem.name}</h2>
+                    <img src={problem.image} alt={problem.name}/>
+                    <p>{problem.description}</p>
+                    <hr/>
+                </Link>
+                    </div>
+                )
             }))
         }
     }

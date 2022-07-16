@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Problems from './pages/problems';
 import About from './pages/about';
 import Home from './pages/home';
+import Solutions from './pages/solutions';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
   console.log(problems)
 
   useEffect(() => {getProblems()}, [])
+
   return (
     <div>
       <Header/>
@@ -27,10 +29,10 @@ function App() {
       <Route exact path='/' element={<Home/>}/>
       <Route exact path='/about' element={<About/>}/>
       <Route exact path='/problems' element={<Problems problems={problems} />}/>
+      <Route exact path='/problems/:id' element={<Solutions problems={problems} getProblems={getProblems} />}/>
     </Routes>
     <Footer/>
     </div>
   );
 }
-
 export default App;
