@@ -7,6 +7,8 @@ import Problems from './pages/problems';
 import About from './pages/about';
 import Home from './pages/home';
 import Solutions from './pages/solutions';
+import Tanks from './pages/tanks';
+import TankShow from './pages/tankShow';
 
 function App() {
 
@@ -21,6 +23,17 @@ function App() {
   console.log(problems)
 
   useEffect(() => {getProblems()}, [])
+  const [tanks, setTanks] = useState([]);
+
+  const Tank_URL = "http://localhost:3000/tanks"
+  const getTanks = async () => {
+    const response = await fetch(Tank_URL);
+    const data = await response.json();
+    setTanks(data.tanks)
+  }
+  console.log(tanks)
+
+  useEffect(() => {getTanks()}, [])
 
   return (
     <div className="content">
@@ -30,6 +43,8 @@ function App() {
       <Route exact path='/about' element={<About/>}/>
       <Route exact path='/problems' element={<Problems problems={problems} />}/>
       <Route exact path='/problems/:id' element={<Solutions problems={problems} getProblems={getProblems} />}/>
+      <Route exact path='/tanks' element={<Tanks tanks={tanks} />}/>
+      <Route exact path='/tanks/:id' element={<TankShow tanks={tanks} getTanks={getTanks} />}/>
     </Routes>
     <Footer/>
     </div>

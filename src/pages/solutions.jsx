@@ -17,7 +17,7 @@ function Solutions (props) {
                     <div className="center column">
                     <h4>Recommended Product</h4>
                     <img className="productimg" src={problem.recimage} alt={problem.name} />
-                    <a className="button"href={problem.recurl} target="_blank">Buy Now</a>
+                    <a className="button"href={problem.recurl} target="_blank" rel="noreferrer">Buy Now</a>
                     </div>
                 </div>
             )
