@@ -2,16 +2,21 @@ import { Link } from 'react-router-dom'
 
 function Header(props) {
     return(
-        <nav>
-            <Link to="/">
+        <nav className="row">
+            <Link to="/" className="logo">
                 <img id="logo" src="https://bradleymather.com/wp-content/uploads/2022/07/Fish-Problems.png" alt="logo" />
             </Link>
-            <Link to="/about">
-                <h3>About</h3>
+            <div className="navlinks">
+            <Link to="/" className="button">
+                <h5>Home</h5>
             </Link>
-            <Link to="/problems">
-                <h3>Common Problems</h3>
+            <Link to="/about" className="button">
+                <h5>About</h5>
             </Link>
+            <Link to="/problems" className="button">
+                <h5>Common Problems</h5>
+            </Link>
+            </div>
         </nav>
     )
 }

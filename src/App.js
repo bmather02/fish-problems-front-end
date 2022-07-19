@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {getProblems()}, [])
 
   return (
-    <div>
+    <div className="content">
       <Header/>
     <Routes>
       <Route exact path='/' element={<Home/>}/>
