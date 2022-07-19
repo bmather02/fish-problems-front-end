@@ -1,22 +1,12 @@
-import {Link} from 'react-router-dom'
+import ProblemsIndex from "../components/ProblemsIndex"
 function Problems({problems}) {
-    function loaded() {
-        if(problems){
-            return (problems.map((problem) => {
-                return (
-                    <div key={problem._id}>
-                <Link to={`/problems/${problem._id}`}>
-                    <h2>{problem.name}</h2>
-                    <img className="cardimg"src={problem.image} alt={problem.name}/>
-                    <p>{problem.description}</p>
-                    <hr/>
-                </Link>
-                    </div>
-                )
-            }))
-        }
-    }
-    return problems ? loaded() : <p>Something went wrong</p>
+    
+    return(
+        <div className="center column">
+            <h1>Common Problems</h1>
+         <ProblemsIndex problems={problems}/>
+         </div>
+    )
 }
 
 export default Problems

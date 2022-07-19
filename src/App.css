@@ -1,8 +1,11 @@
 .content{
-  width:100vw;
+  width:80vw;
+  background-color: white;
+  border-radius: 10px;
 }
 #logo {
-  max-height: 206px;
+  max-height: 175px;
+  margin: 8px 5px 5px 8px;
 }
 .logo{
   width:40vw
@@ -12,8 +15,9 @@ nav{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100vw;
+  width: 80vw;
   max-height: 200px;
+  border-radius: 5px;
 }
 .navlinks {
   display: flex;
@@ -27,6 +31,7 @@ nav{
   color: white;
   align-items: center;
   text-align: center;
+  border-radius: 5px;
 }
 main {
   min-height: 75vh;
@@ -39,6 +44,9 @@ main {
 .center {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
 }
 .mainimg{
   max-width: 60vw;
@@ -46,4 +54,40 @@ main {
 }
 .productimg {
   max-width: 25vw;
+}
+.detail {
+  width: 60vw;
+  text-align: left;
+}
+.column {
+  flex-direction: column;
+}
+.cardimg {
+  max-width: 25vw;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  width: 45vw;
+  background-color: #EC88FF;
+  margin: 15px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px darkgray;
+  text-align: center;
+  color: white
+}
+.card>a{
+  color: white;
+  text-decoration: none;
+}
+.card:hover{
+  box-shadow: 1px 1px 10px darkgray;
+  width: 45.5vw;
+  transition: 500ms;
+}
+p {
+  font-size: 24px;
+}
+.show {
+  padding: 15px;
 }
