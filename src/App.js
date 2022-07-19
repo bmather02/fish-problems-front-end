@@ -14,7 +14,7 @@ function App() {
 
   const [problems, setProblems] = useState([]);
 
-  const URL = "http://localhost:3001/problems"
+  const URL = "https://fishproblemsnodebackend.herokuapp.com/problems"
   const getProblems = async () => {
     const response = await fetch(URL);
     const data = await response.json();
