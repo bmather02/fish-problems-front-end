@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {getProblems()}, [])
   const [tanks, setTanks] = useState([]);
 
-  const Tank_URL = "http://localhost:3000/tanks"
+  const Tank_URL = "https://fishtank-api.herokuapp.com/tanks"
   const getTanks = async () => {
     const response = await fetch(Tank_URL);
     const data = await response.json();

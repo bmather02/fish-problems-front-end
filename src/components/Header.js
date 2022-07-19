@@ -16,6 +16,9 @@ function Header(props) {
             <Link to="/problems" className="button">
                 <h5>Common Problems</h5>
             </Link>
+            <Link to="/tanks" className="button">
+                <h5>Common Tanks</h5>
+            </Link>
             </div>
         </nav>
     )
