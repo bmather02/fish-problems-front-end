@@ -91,3 +91,6 @@ p {
 .show {
   padding: 15px;
 }
+.tankimg {
+  max-width: 35vw;
+}
