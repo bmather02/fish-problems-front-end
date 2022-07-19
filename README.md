@@ -4,17 +4,17 @@ Problems with your aquarium? look no further than Fish Problems! Fish Problems i
 
 ## Technologies Used
 
--MongoDB
--Express
--React
--Node
--JavaScript
--Skeleton CSS Framework
--Ruby
--Rails
--PostgreSQL
--Netlify
--Heroku
+- MongoDB
+- Express
+- React
+- Node
+- JavaScript
+- Skeleton CSS Framework
+- Ruby
+- Rails
+- PostgreSQL
+- Netlify
+- Heroku
 
 ## Screenshot
 
