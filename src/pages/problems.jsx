@@ -7,7 +7,7 @@ function Problems({problems}) {
                     <div key={problem._id}>
                 <Link to={`/problems/${problem._id}`}>
                     <h2>{problem.name}</h2>
-                    <img src={problem.image} alt={problem.name}/>
+                    <img className="cardimg"src={problem.image} alt={problem.name}/>
                     <p>{problem.description}</p>
                     <hr/>
                 </Link>

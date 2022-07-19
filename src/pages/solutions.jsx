@@ -8,13 +8,17 @@ function Solutions (props) {
         } else {
             return(
                 <div>
-                    <h1>This is the solution for your {problem.name} problem</h1>
-                    <img src={problem.image} alt={problem.name}/>
+                    <h1 className="center">This is the solution for your {problem.name} problem</h1>
+                    <img className="mainimg center" src={problem.image} alt={problem.name}/>
                     <p>{problem.detail}</p>
+                    <div className='u-full-width center'>
                     <h3>Our Solution: {problem.solution}</h3>
+                    </div>
+                    <div className="center">
                     <h4>Recommended Product</h4>
-                    <img src={problem.recimage} alt={problem.name} />
+                    <img className="productimg" src={problem.recimage} alt={problem.name} />
                     <a href={problem.recurl}>Buy Now</a>
+                    </div>
                 </div>
             )
         }

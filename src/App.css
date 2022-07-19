@@ -26,6 +26,7 @@ nav{
   background-color: #A55FFA;
   color: white;
   align-items: center;
+  text-align: center;
 }
 main {
   min-height: 75vh;
@@ -34,4 +35,15 @@ main {
   background-color: #EC88FF;
   color: white;
   border-color: white;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.mainimg{
+  max-width: 60vw;
+  margin: auto
+}
+.productimg {
+  max-width: 25vw;
 }
